@@ -1,9 +1,21 @@
+//File was given and edited
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
 const commentWrapper = document.querySelector('.comment-wrapper');
 
 commentWrapper.style.display = 'none';
+
+//This makes it so the user can press tab to navigate the page and use enter to access that selection  
+document.addEventListener('DOMContentLoaded', function () {
+    var showHideButton = document.querySelector('.show-hide');
+
+    showHideButton.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter') {
+            showHideButton.click();
+        }
+    });
+});
 
 showHideBtn.onclick = function() {
   let showHideText = showHideBtn.textContent;
